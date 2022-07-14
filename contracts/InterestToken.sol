@@ -1,10 +1,10 @@
 //SPDX-License-Identifier: MIT
 pragma solidity 0.8.15;
 
-import '@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol';
-import '@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol';
-import '@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol';
-import '@openzeppelin/contracts-upgradeable/token/ERC20/extensions/ERC20VotesUpgradeable.sol';
+import "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
+import "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol";
+import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
+import "@openzeppelin/contracts-upgradeable/token/ERC20/extensions/ERC20VotesUpgradeable.sol";
 
 contract InterestToken is
     Initializable,
@@ -16,8 +16,8 @@ contract InterestToken is
                                 ROLES
     //////////////////////////////////////////////////////////////*/
 
-    bytes32 public constant MINTER_ROLE = keccak256('MINTER_ROLE');
-    bytes32 public constant DEVELOPER_ROLE = keccak256('DEVELOPER_ROLE');
+    bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
+    bytes32 public constant DEVELOPER_ROLE = keccak256("DEVELOPER_ROLE");
 
     /*///////////////////////////////////////////////////////////////
                             INITIALIZER
@@ -29,8 +29,8 @@ contract InterestToken is
      * - Can only be called at once and should be called during creation to prevent front running.
      */
     function initialize() external initializer {
-        __ERC20_init('Interest Token', 'XIP');
-        __ERC20Permit_init('Interest Token');
+        __ERC20_init("Interest Token", "XIP");
+        __ERC20Permit_init("Interest Token");
 
         _grantRole(DEFAULT_ADMIN_ROLE, _msgSender());
         _grantRole(DEVELOPER_ROLE, _msgSender());

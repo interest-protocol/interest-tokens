@@ -129,7 +129,7 @@ describe('Dinero', function () {
       );
     });
 
-    it('upgrades to a new versio', async () => {
+    it('upgrades to a new version', async () => {
       const { dinero, minterRole, otherAccount } = await loadFixture(
         deployDineroFixture
       );
