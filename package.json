@@ -4,7 +4,11 @@
   "description": "ERC20 tokens of the interest protocol ecosystem",
   "main": "index.js",
   "scripts": {
-    "test": "npx hardhat test"
+    "test": "npx hardhat test",
+    "coverage": "npx hardhat coverage --testfiles './test/**.ts'",
+    "clean": "npx hardhat clean && rimraf cache && rimraf artifacts",
+    "compile": "npx hardhat compile",
+    "publish": "npm publish contracts --access public"
   },
   "keywords": [
     "DeFi",
