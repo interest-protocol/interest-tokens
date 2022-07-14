@@ -22,5 +22,8 @@
   ],
   "author": "Interest Labs Inc. <jose@interestprotocol.com>",
   "license": "MIT",
-  "homepage": "https://interestprotocol.com"
+  "homepage": "https://interestprotocol.com",
+  "dependencies": {
+    "@openzeppelin/contracts-upgradeable": "^4.7.0"
+  }
 }
